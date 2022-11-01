@@ -1,10 +1,10 @@
 # Predicting Churn for Bank Customers
 
-##Introduction
+## Introduction
 
 ## Results
 
-##Summary
+## Summary
 
 
 
