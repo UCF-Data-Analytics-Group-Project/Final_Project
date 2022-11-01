@@ -1,6 +1,7 @@
 # Predicting Churn for Bank Customers
 
 ## Introduction
+![Customer Churn](churn.png)
 Customer Churn is defined as the percentage of customers that stopped using your company's product or service during a certain time frame. It's important because it costs more to acquire new customers than it does to retain existing customers. 
 
 ## Results
