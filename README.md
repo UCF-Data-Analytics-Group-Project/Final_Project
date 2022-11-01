@@ -17,7 +17,10 @@ Customer Churn is defined as the percentage of customers that stopped using your
 ![Future Predictions](future.png)
 
 2. Analyze churn as frequently as you can. Use your churned customers as a means of understanding why customers are leaving.
-4. Show your customers that you care.
-5. Offer more rewards or create a new rewards program.
+
+![Customer Rewards](rewards.jpg)
+
+3. Show your customers that you care.
+4. Offer more rewards or create a new rewards program.
 
 
