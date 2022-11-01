@@ -10,8 +10,16 @@ Customer Churn is defined as the percentage of customers that stopped using your
 ## Summary
 
 ### Reducing Customer Churn
+![Best Customers](best_customers.jpeg)
+
 1. Focus your attention on your best customers. It could be even more beneficial to pool your resources into your loyal, profitable customers.
+
+![Future Predictions](future.png)
+
 2. Analyze churn as frequently as you can. Use your churned customers as a means of understanding why customers are leaving.
+
+![Customer Rewards](rewards.jpg)
+
 3. Show your customers that you care.
 4. Offer more rewards or create a new rewards program.
 
