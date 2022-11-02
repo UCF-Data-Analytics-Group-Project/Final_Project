@@ -1,0 +1,32 @@
+CREATE TABLE IF NOT EXISTS public.customer_table
+(
+    customer_id integer NOT NULL,
+    "Surname" "char" NOT NULL,
+    "CreditScore" double precision NOT NULL,
+    "Gender" "char",
+    "Age" integer,
+    PRIMARY KEY (customer_id)
+);
+
+CREATE TABLE IF NOT EXISTS public.customer_details
+(
+    "CustomerID" integer NOT NULL,
+    "Geography" "char" NOT NULL,
+    "Tenure" integer,
+    "Balance" double precision NOT NULL,
+    "NumOfProducts" integer,
+    "HasCrCard" integer,
+    "IsActiveMember" integer,
+    "EstimatedSalary" double precision,
+    "Exited" integer,
+    PRIMARY KEY ("CustomerID")
+);
+
+ALTER TABLE IF EXISTS public.customer_details
+    ADD FOREIGN KEY ("CustomerID")
+    REFERENCES public.customer_table (customer_id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+END;
