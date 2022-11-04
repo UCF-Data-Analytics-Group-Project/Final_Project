@@ -1,0 +1,78 @@
+BEGIN;
+
+
+CREATE TABLE IF NOT EXISTS public."Products"
+(
+    "Product_id" integer NOT NULL,
+    "ProductName" "char" NOT NULL,
+    "TechSupport" "char",
+    PRIMARY KEY ("Product_id")
+);
+
+CREATE TABLE IF NOT EXISTS public.customer
+(
+    customer_id integer NOT NULL,
+    gender "char",
+    "SeniorCitizen" "char",
+    "Partner" "char",
+    "Dependents" "char",
+    tenure integer,
+    "Churn" "char",
+    CONSTRAINT customer_pkey PRIMARY KEY (customer_id)
+);
+
+CREATE TABLE IF NOT EXISTS public."Service"
+(
+    "Service_id" integer NOT NULL,
+    "ServiceName" "char" NOT NULL,
+    "TechSupport" "char",
+    PRIMARY KEY ("Service_id")
+);
+
+CREATE TABLE IF NOT EXISTS public."Financial"
+(
+    "Payment_id" integer NOT NULL,
+    "BillingMethod" "char" NOT NULL,
+    "MonthlyCharges" double precision NOT NULL,
+    "TotalCharges" double precision,
+    PRIMARY KEY ("Payment_id")
+);
+
+CREATE TABLE IF NOT EXISTS public."customer_Products"
+(
+    customer_customer_id integer NOT NULL,
+    "Products_Product_id" integer NOT NULL
+);
+
+ALTER TABLE IF EXISTS public.customer
+    ADD FOREIGN KEY (customer_id)
+    REFERENCES public."Service" ("Service_id") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public.customer
+    ADD FOREIGN KEY (customer_id)
+    REFERENCES public."Financial" ("Payment_id") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."customer_Products"
+    ADD FOREIGN KEY (customer_customer_id)
+    REFERENCES public.customer (customer_id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."customer_Products"
+    ADD FOREIGN KEY ("Products_Product_id")
+    REFERENCES public."Products" ("Product_id") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+END;
