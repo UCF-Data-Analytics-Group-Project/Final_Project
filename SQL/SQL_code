@@ -1,0 +1,29 @@
+BEGIN;
+
+
+CREATE TABLE IF NOT EXISTS "Teleco"
+(
+    "customerID" text NOT NULL,
+    gender text,
+    "SeniorCitizen" text,
+    "Partner" text,
+    "Dependents" text,
+    tenure text,
+    "PhoneService" text,
+    "MultipleLines" text,
+    "InternetService" text,
+    "OnlineSecurity" text,
+    "OnlineBackup" text,
+    "DeviceProtection" text,
+    "TechSupport" text,
+    "StreamingTV" text,
+    "StreamingMovies" text,
+    "Contract" text,
+    "PaperlessBilling" text,
+    "PaymentMethod" text,
+    "MonthlyCharges" text,
+    "TotalCharges" text,
+    "Churn" text,
+    PRIMARY KEY ("customerID")
+);
+END;
