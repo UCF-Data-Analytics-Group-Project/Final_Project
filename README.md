@@ -29,7 +29,7 @@ Telco, a telecommunications company, has assigned us to perform an exploratory a
 
 ## Resources
 - Data Source: [WA_Fn-UseC_-Telco-Customer-Churn.csv](https://github.com/UCF-Data-Analytics-Group-Project/Final_Project/blob/Cindy_T/WA_Fn-UseC_-Telco-Customer-Churn.csv)
--	Software: Pandas Library, Matplotlib, MongoDB, Numpy, Plotly, PostgreSQL, Python, Scikitlearn, Tableau, Scikitlearn
+-	Software: Pandas Library, Matplotlib, Numpy, Plotly, PostgreSQL, Python, Scikitlearn, Tableau, Scikitlearn
 
 ## Team Details
 
