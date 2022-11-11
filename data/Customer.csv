@@ -1,4 +1,4 @@
-customer_ID,gender,Senior_Citizen,Partner,Dependents,tenure,Churn
+customerID,gender,SeniorCitizen,Partner,Dependents,tenure,Churn
 7590-VHVEG,Female,0,Yes,No,1,No
 5575-GNVDE,Male,0,No,No,34,No
 3668-QPYBK,Male,0,No,No,2,Yes
