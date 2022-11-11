@@ -1,71 +1,47 @@
-BEGIN;
+-- Creating tables for Customer
 
-
-CREATE TABLE IF NOT EXISTS "Teleco"."Customer"
-(
-    "customerID" character varying NOT NULL,
-    gender text,
-    "SeniorCitizen" integer NOT NULL,
-    "Partner" text,
-    "Dependents" text,
-    tenure integer,
-    "Churn" text,
-    PRIMARY KEY ("customerID")
+CREATE TABLE IF NOT EXISTS "Customer"    (
+     customerID VARCHAR(20) NOT NULL,
+     gender VARCHAR(10),	
+	 SeniorCitizen smallint,
+	 Partner VARCHAR(4),
+	 Dependents VARCHAR(4),
+	 tenure integer,
+	 Churn  VARCHAR(4), 
+     PRIMARY KEY (CustomerID)     
 );
 
-CREATE TABLE IF NOT EXISTS "Teleco"."Services"
-(
-    "CustomerSVC_id" character varying NOT NULL,
-    "OnlineBackup" character varying,
-    "DeviceProtection" character varying,
-    "StreamingTV" text,
-    "StreamingMovies" text,
-    "Contract" character varying,
-    "TechSupport" text,
-    "OnlineSecurity" text,
-    PRIMARY KEY ("CustomerSVC_id")
+-- Creating tables for Services
+CREATE TABLE IF NOT EXISTS "Services"  (
+     CustomerSVC_id VARCHAR(20) NOT NULL,
+     OnlineBackup VARCHAR(20),
+	 DeviceProtection VARCHAR(20),		 	 
+	 StreamingTV VARCHAR(20),
+	 StreamingMovies VARCHAR(20),
+	 Contract VARCHAR(20),
+	 TechSupport VARCHAR(20),
+	 OnlineSecurity VARCHAR(20),
+     PRIMARY KEY (CustomerSVC_id)     
 );
 
-CREATE TABLE IF NOT EXISTS "Teleco"."Products"
-(
-    "customerPrdct_id" character varying NOT NULL,
-    "PhoneService" character varying,
-    "MultipleLines" character varying,
-    "InternetService" character varying,
-    PRIMARY KEY ("customerPrdct_id")
+-- Creating tables for Products
+CREATE TABLE IF NOT EXISTS "Products" (
+     customerPrdct_id VARCHAR(20) NOT NULL,
+     PhoneService VARCHAR(20),
+	 MultipleLines VARCHAR(20),
+	 InternetService VARCHAR(20),	
+     PRIMARY KEY (customerPrdct_id)     
 );
 
-CREATE TABLE IF NOT EXISTS "Teleco"."Billing"
-(
-    customer_billing_id character varying NOT NULL,
-    "PaperlessBilling" text NOT NULL,
-    "PaymentMethod" character varying NOT NULL,
-    "MonthlyCharges" double precision NOT NULL,
-    "TotalCharges" double precision NOT NULL,
-    PRIMARY KEY (customer_billing_id)
+
+-- Creating tables for Billing Department
+Drop TABLE if EXISTS
+CREATE TABLE Billing (
+     customer_billing_id VARCHAR(20) NOT NULL,
+     PaperBilling VARCHAR(40),
+	 PaymentMethod VARCHAR(40),
+	 MonthlyCharges double PRECISION,
+	 TotalCharges DOUBLE PRECISION,
+     PRIMARY KEY (customer_billing_id)     
 );
 
-ALTER TABLE IF EXISTS "Teleco"."Customer"
-    ADD FOREIGN KEY ("customerID")
-    REFERENCES "Teleco"."Services" ("CustomerSVC_id") MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
-ALTER TABLE IF EXISTS "Teleco"."Customer"
-    ADD FOREIGN KEY ("customerID")
-    REFERENCES "Teleco"."Products" ("customerPrdct_id") MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
-ALTER TABLE IF EXISTS "Teleco"."Customer"
-    ADD FOREIGN KEY ("customerID")
-    REFERENCES "Teleco"."Billing" (customer_billing_id) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-END;
