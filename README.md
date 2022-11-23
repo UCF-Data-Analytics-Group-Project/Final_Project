@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Telco, a telecommunications company, has assigned us to perform a predictive analysis based on established data, with the goal of identifying future customer churn trends. In addition to the historical data, we used multiple statistical algorithms and build predictive models to identify the probability of future outcomes. We presented our findings via Google slide with various types of pragmatic visuals in order to comprehensively convey our results. This analysis will provide Telco with the necessary insights to improve upon the current marketing and operational processes, reduce customer churn, and increase profits.
+Telco, a telecommunications company, has assigned us to perform a predictive analysis based on established data, with the goal of identifying future customer churn trends. In addition to the historical data, we used multiple statistical algorithms and build predictive models to identify the probability of future outcomes. We presented our findings via Google slides with various types of pragmatic visuals in order to comprehensively convey our results. This analysis will provide Telco with the necessary insights to improve upon existing marketing and operational processes, reduce customer churn, and increase profits.
 
 ## Presentation
 
