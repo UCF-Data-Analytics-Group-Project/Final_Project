@@ -42,17 +42,29 @@ Telco, a telecommunications company, has assigned us to perform a predictive ana
 
 - <ins> Exploratory Data Analysis:<ins>
 
-![alt text](images/Teleco_customerDB_ERD.png)
+![alt text](images/Updated%20Teleco_customerDB_ERD.png)
 	
 - <ins> Data analysis: <ins>
 
-  -	Models: Logistic Regression, Decision Tree, XGBoost
-  -	Training and Testing sets: split randomly with 70-30 ratio
+  -Models: Logistic Regression, Decision Tree, XGBoost
 
 
-![alt text](images/Teleco_customerDB_ERD.png)
+![alt text](images/Confusion_Matrices.png)
+
+
 ## Results
-	
+
+
+<ins>Churn per contract lenght<ins>
+
+![alt text](images/Dashboard2.2.png)	
+
+<ins>Churn per gender<ins>
+
+![alt text](images/Dashboard3.png)	
+
+<ins>Churn per seniors, total lost revenue<ins>
+
 ![alt text](images/Dashboard4.png)	
 	
 	
@@ -79,7 +91,4 @@ Telco, a telecommunications company, has assigned us to perform a predictive ana
   - Christ Stell
   - Cindy Toussaint
   - Hunter Valentine
-
-
-<!-- ## Summary -->
 
